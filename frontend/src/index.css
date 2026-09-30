@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --color-military-navy: #0f172a;
+  --color-military-slate: #334155;
+  --color-military-blue: #2563eb;
+  --color-military-light: #f8fafc;
+  --color-military-accent: #fbbf24;
+  --font-sans: Inter, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-military-light text-military-slate font-sans antialiased;
+  }
+}
+
+/* Custom Scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9; 
+}
+::-webkit-scrollbar-thumb {
+  background: #94a3b8; 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b; 
+}
+
+/* Global Dark Mode Overrides */
+.dark body, .dark #root, .dark .min-h-screen {
+  background-color: #0f172a !important;
+  color: #f1f5f9 !important;
+}
+
+.dark .bg-white, .dark .bg-\[\#f8fafc\] {
+  background-color: #1e293b !important;
+  color: #f1f5f9 !important;
+  border-color: #334155 !important;
+}
+
+.dark .text-gray-800, .dark .text-slate-800, .dark .text-military-navy, .dark .text-\[\#1e293b\] {
+  color: #f8fafc !important;
+}
+
+.dark .text-gray-500, .dark .text-gray-600 {
+  color: #94a3b8 !important;
+}
+
+.dark .border, .dark .border-b, .dark .border-t, .dark .border-gray-100, .dark .border-gray-200 {
+  border-color: #334155 !important;
+}
+
+.dark table thead tr, .dark .bg-\[\#1e293b\] {
+  background-color: #020617 !important;
+}
+
+.dark .bg-gray-50, .dark .hover\:bg-gray-50:hover {
+  background-color: #0f172a !important;
+  border-color: #334155 !important;
+}
+
+.dark input, .dark select {
+  background-color: #0f172a !important;
+  color: #f1f5f9 !important;
+  border-color: #334155 !important;
+}
+
+.dark header {
+  background-color: #1e293b !important;
+  border-bottom-color: #334155 !important;
+}
+
+.dark aside {
+  background-color: #020617 !important;
+  border-right-color: #1e293b !important;
+}
